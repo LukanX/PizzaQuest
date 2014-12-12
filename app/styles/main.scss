@@ -20,6 +20,9 @@
     text-align: center;
     vertical-align: middle;
     color: white;
+    .logo{
+      width: 80%;
+    }
   }
 }
 
@@ -31,4 +34,8 @@
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+
+  .logo{
+    width: 100%;
+  }
 }
