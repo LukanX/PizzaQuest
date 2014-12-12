@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+$fonts: 'GothamUltra', 'Lato', sans-serif;
+
+html{
+	font-family: $fonts;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 900;
+	&.thin{
+		font-weight: 300;
+	}
+}
