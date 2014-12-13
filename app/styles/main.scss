@@ -82,8 +82,16 @@
   margin: auto;
 }
 
+.rounded-image{
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+
 .section{
-  padding: 2em 1em;
+  padding: 2.5em 1em;
 }
 
 .call-to-arms{
