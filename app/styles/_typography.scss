@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,600,900);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800,700);
 
-$fonts: 'GothamUltra', 'Lato', sans-serif;
+$fonts: 'GothamUltra', 'Open Sans', sans-serif;
 
 html{
 	font-family: $fonts;
@@ -8,13 +8,13 @@ html{
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-weight: 900;
+	font-weight: 700;
 	line-height: 1.2em;
 	&.thin{
 		font-weight: 300;
 	}
 	&.bold{
-		font-weight: 600;
+		font-weight: 800;
 	}
 	&.normal{
 		font-weight: 400;

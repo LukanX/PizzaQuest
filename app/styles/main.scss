@@ -82,9 +82,12 @@
   margin: auto;
 }
 
+.section{
+  padding: 2em 1em;
+}
+
 .call-to-arms{
   background-color: $yellow;
-  padding: 2em 1em;
   h1{
     color: $dark-red;
     margin-bottom: .5em;
@@ -92,6 +95,10 @@
   h3{
     color: $blood-red;
   }
+}
+
+.notable-pizza{
+  background-color: $dark-red;
 }
 
 .container {
