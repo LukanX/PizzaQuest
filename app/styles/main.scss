@@ -2,9 +2,36 @@
 // endbower
 
 @import "reset";
+@import "colors";
 @import "typography";
 @import "grid";
 @import "compass";
+
+
+.full-size{
+  width: 100%;
+  height: 100%;
+}
+// PADDING AND MARGINS
+.p1{
+  padding: 1em;
+}
+
+.pt1{
+  padding-top: 1em;
+}
+
+.mb1{
+  margin-bottom: 1em;
+}
+
+.mb2{
+  margin-bottom: 2em;
+}
+
+.pb1{
+  padding-bottom: 1em;
+}
 
 .hero{
   background: url(../images/snakefighter.jpg) center center no-repeat;
@@ -21,12 +48,54 @@
     vertical-align: middle;
     color: white;
     .logo{
-      width: 80%;
+      margin-bottom: .25em;
     }
+  }
+  .login{
+      list-style: none;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      li{
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 0 .5em;
+        a{
+          color: $yellow;
+          text-decoration: none;
+          &:hover{
+            color: $red-orange;
+          }
+        }
+        &:first-child{
+          border-right: 1px solid $red-orange;
+        }
+      }
+    }
+}
+
+.block-image{
+  display: block;
+  width: auto;
+  margin: auto;
+}
+
+.call-to-arms{
+  background-color: $yellow;
+  padding: 2em 1em;
+  h1{
+    color: $dark-red;
+    margin-bottom: .5em;
+  }
+  h3{
+    color: $blood-red;
   }
 }
 
 .container {
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
     position: relative;
@@ -35,7 +104,15 @@
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
+}
+
+@media screen and (max-width: 480px) {
   .logo{
-    width: 100%;
+    width: 80%;
   }
+  .mobile-padding{
+    padding-bottom: 2em;
+  }
+
+
 }
