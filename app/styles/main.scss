@@ -7,6 +7,18 @@
 @import "grid";
 @import "compass";
 
+@mixin maintain-ratio($ratio: 1 1) {
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+ 
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
 
 .full-size{
   width: 100%;
@@ -64,7 +76,6 @@
         padding: 0 .5em;
         a{
           color: $yellow;
-          text-decoration: none;
           &:hover{
             color: $red-orange;
           }
@@ -74,6 +85,18 @@
         }
       }
     }
+}
+
+.pizza-call{
+  background: url(../images/battlescene.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  h1{
+    padding-bottom: .5em;
+  }
+  h3{
+    padding-bottom: 2em;
+  }
 }
 
 .block-image{
@@ -105,6 +128,56 @@
   }
 }
 
+.hall-of-champions{
+  background: $blood-red url(../images/crossed-swords.png) no-repeat center center;
+  background-size: contain;
+  table{
+    width: 100%;
+    text-align: left;
+    margin-top: 2em;
+    border-collapse: collapse;
+    thead td{
+      font-size: .85em;
+      opacity: .35;
+      padding-bottom: 1.5em;
+      font-weight: 600;
+    }
+    tbody{
+      td{
+        vertical-align: middle;
+        padding-bottom: 1em;
+      }
+      .rank{
+        width: 5%;
+        font-size: 1.25em;
+        color: $red-orange;
+        font-weight: 800;
+      }
+      .warrior{
+        width: 35%;
+        .name{
+          font-size: 1.15em;
+          font-weight: 600;
+          padding-bottom: .25em;
+        }
+        .class{
+          font-size: .75em;
+        }
+      }
+      .loyalty{
+        font-weight: 600;
+        width: 45%;
+      }
+      .total-pp{
+        font-weight: 800;
+        color: $red-orange;
+        font-size: 1.5em;
+        width: 15%;
+      }
+    }
+  }
+}
+
 .notable-pizza{
   background-color: $dark-red;
 }
@@ -116,6 +189,19 @@
     position: relative;
   }
 
+.padded-col{
+  padding: 0 1em;
+}
+
+.button{
+  background: $yellow;
+  padding: 1em 3em;
+  font-weight: 800;
+  border-radius: 3px;
+  display: inline-block;
+  color: $dark-red;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
@@ -124,9 +210,6 @@
 @media screen and (max-width: 480px) {
   .logo{
     width: 80%;
-  }
-  .mobile-padding{
-    padding-bottom: 2em;
   }
 
 
